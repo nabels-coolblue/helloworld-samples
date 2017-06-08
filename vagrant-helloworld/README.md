@@ -14,6 +14,11 @@ cd into the root of the project.
 vagrant up
 ```
 
+## Prerequisites
+
+- Virtualbox (https://www.virtualbox.org/wiki/Downloads)
+- Vagrant (https://www.vagrantup.com/downloads.html)
+
 ## Outcome 
 
 A Virtual Machine called server, running `ubuntu/xenial64` with 4GB of memory.

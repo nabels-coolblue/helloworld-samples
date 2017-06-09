@@ -1,0 +1,4 @@
+[submodule "gh-pages"]
+	path = gh-pages
+	url = git@github.com:nabels-coolblue/helloworld-samples.git
+	branch = gh-pages

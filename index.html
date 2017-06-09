@@ -1,4 +1,5 @@
-<!-- from: https://www.quackit.com/html/templates/simple_website_templates.cfm -->
+<!-- website template from: https://www.quackit.com/html/templates/simple_website_templates.cfm -->
+<!-- github javascript lib: https://github.com/github-tools/github -->
 
 <!doctype html>
 <title>Example</title>
@@ -37,6 +38,31 @@
     padding: 1em;
   }
 </style>
+
+
+<script src="https://unpkg.com/github-api/dist/GitHub.min.js"></script>
+
+var GitHub = require('github-api');
+
+// basic auth
+var gh = new GitHub({
+   username: 'FOO',
+   password: 'NotFoo'
+   /* also acceptable:
+      token: 'MY_OAUTH_TOKEN'
+    */
+});
+
+var me = gh.getUser(); // no user specified defaults to the user for whom credentials were provided
+me.listNotifications(function(err, notifications) {
+   // do some stuff
+});
+
+var clayreimann = gh.getUser('nabels-coolblue');
+clayreimann.listStarredRepos(function(err, repos) {
+   console.log("hallo");
+});
+
 <body>
   <nav class="col-1">Nav</nav>
   <div class="col-2">
